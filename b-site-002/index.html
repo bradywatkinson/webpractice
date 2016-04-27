@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>b-site-002 Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style type="text/css">
+        #circle {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50px;
+            position:absolute;
+            left:"200px";
+            top:"200px";
+            display:"none";
+        }
+
+        .center {
+            margin: 10 50;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="center">
+        <p id="status"></p>
+        <div id="circle"></div>
+    </div>
+
+    <script type="text/javascript">
+        // this is a comment
+
+        var c=300;
+        var x, y, time;
+        var t_display=Date.now(), t_total=0;
+        // var text_pre = "Reaction: ";
+        var count=0;
+
+        function showBox () {
+            time=Math.random()*4000;
+            setTimeout (function () {
+                document.getElementById("circle").style.display="block";
+                t_display=Date.now();
+            }, time);
+        }
+
+        document.getElementById("circle").onclick=function () {
+            // increment counter
+            count++;
+            if (count>5) {
+                alert("Your average reaction time was: "+Math.floor(t_total/count));
+            } else {
+
+                // change pos
+                x=Math.floor((Math.random() * c));
+                y=Math.floor((Math.random() * c));
+                this.style.top=x+"px";
+                this.style.left=y+"px";
+
+                // change color
+                if (this.style.background=="green") {
+                    this.style.background="red";
+                } else {
+                    this.style.background="green";
+                }
+
+                // update next box
+                this.style.display="none";
+                showBox();
+                document.getElementById("status").innerHTML="Trial: "+count+" Reaction: "+(Date.now()-t_display);
+                t_total=t_total+Date.now()-t_display;
+            }
+        }
+
+        
+
+
+        showBox();
+        
+    </script>
+
+</body>
+</html>
