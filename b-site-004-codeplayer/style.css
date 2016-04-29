@@ -1,0 +1,133 @@
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2 {
+    padding: none;
+    margin: inherit;
+}
+
+body {
+    margin: 0;
+    height: 500px;
+}
+
+p {
+    margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+iframe {
+    /*border: none;*/
+    width: 90%;
+    height: 100%;
+    border: none;
+}
+
+
+
+.content {
+    height: 100%;
+    width: 49%;
+    float: left;
+    border-right: 1px solid black;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.content textarea {
+    height: 100%;
+    width: 97%;
+    text-align: "top";
+    resize: none;
+    /*border: 1px solid black;*/
+    border: none;
+    font-family: monospace;
+    font-size: 1.2em;
+    outline: none;
+}
+
+#js-error {
+    color: red;
+    display: none;
+}
+.content p {
+    text-align: right;
+    padding-right: 10px;
+}
+
+div.selected {
+    display: block;
+}
+
+#t-result {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#title {
+    float: left;
+    padding: 4px 50px 4px 10px;
+}
+
+#selectors {
+    float: left;
+    border-radius: 3px;
+    border: 1px solid #010101;
+    margin: 8px auto;
+    background-color: #727272;
+}
+
+li.selected {
+    color: white;
+    background-color: black;
+}
+
+#selectors li {
+    float: left;
+    list-style: none;
+    padding: 0 8px;
+    border-right: 1px solid #010101;
+    background-color: none;
+}
+
+#selectors li:hover {
+    color: white;
+}
+
+.selector {
+
+}
+
+#run-button {
+    float: right;
+    margin: 0;
+}
+
+#run-button button {
+    height: 32px;
+    margin: 4px 0 4px 0;
+    padding: none;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+#top-bar {
+    margin: none;
+    width: 100%;
+    height: 40px;
+    background-color: #515151;
+    float: left;
+}

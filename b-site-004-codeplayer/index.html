@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>b-site-004 Code Pad</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+
+</head>
+<body>
+	<div id="top-bar">
+		<div id="title">
+			<h2>B-004 Codepad</h2>
+		</div>
+		<div id="selectors">
+			<li id="b-html" class="selector selected">HTML</li>
+			<li id="b-css" class="selector">CSS</li>
+			<li id="b-js" class="selector">JS</li>
+			<li id="b-result" class="selector selected" style="border-right:none" >Result</li>
+		</div>
+		<div id="run-button">
+			<button>Run</button>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="html" class="content active">
+			<p>HTML</p>
+			<textarea id="t-html" placeholder="Put HTML here"></textarea>
+		</div>
+		<div id="css" class="content">
+			<p>CSS</p>
+			<textarea id="t-css" placeholder="Put CSS here"></textarea>
+		</div>
+		<div id="js" class="content error">
+			<p>JS</p>
+			<p id="js-error"></p>
+			<textarea id="t-js" placeholder="Put JS here"></textarea>
+			
+		</div>
+		<div id="result" class="content active">
+			<p>Result</p>
+			<iframe id="resultFrame"></iframe>
+		</div>
+	</div>
+
+</body>
+</html>
